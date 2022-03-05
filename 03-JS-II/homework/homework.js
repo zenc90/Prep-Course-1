@@ -198,16 +198,13 @@ function esPrimo(numero) {
     return false;
   }
 
-  for(let i = 2; i < numero.length; i++){
+  for(let i = 2; i < numero; i++){
     if(numero % i === 0){
-      return false;
-    }
-    else{
       return true;
     }
   }
 
-  return true;
+  return false;
 }
 
 function esVerdadero(valor){
@@ -229,12 +226,23 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   
+  var tabla = new Array();
+
+  for(let i = 0; i < 11; i++){
+    tabla[i] = i * 6;
+  }
+
+  return tabla;
+
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if(numero.toString().length === 3){
+    return true;
+  }
+  return false;
 }
 
 function doWhile(numero) {
@@ -242,6 +250,14 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
 
+  var step = 0;
+
+  do{
+    numero += 5;
+    step++;
+  }while(step < 8);
+
+  return numero;
 }
 
 
