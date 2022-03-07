@@ -194,17 +194,16 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
 
-  if(numero == 0 || numero == 1){
-    return false;
-  }
+  if(numero <= 1){ return false; }
 
   for(let i = 2; i < numero; i++){
-    if(numero % i === 0){
-      return true;
+    if(numero % i === 0){ 
+      return false;
     }
   }
 
-  return false;
+  return true;
+
 }
 
 function esVerdadero(valor){
